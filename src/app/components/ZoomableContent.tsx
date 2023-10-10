@@ -22,6 +22,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
   ZoomableContentRef,
   ZoomableContentProps
 > = ({ zoomLevel }, ref) => {
+  // State and refs declarations
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [cards, setCards] = useState<CardData[]>([]);
@@ -32,16 +33,14 @@ const ZoomableContent: React.ForwardRefRenderFunction<
     "auto"
   );
 
-  console.log(cards);
-
   const contentRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ x: number; y: number } | null>(null);
-
+  // Function to handle mouse down event
   const handleMouseDown = (e: MouseEvent) => {
     setIsDragging(true);
     dragRef.current = { x: e.clientX, y: e.clientY };
   };
-
+  // Function to handle mouse move event
   const handleMouseMove = (e: MouseEvent) => {
     if (isDragging && dragRef.current) {
       const deltaX = e.clientX - dragRef.current.x;
@@ -50,12 +49,12 @@ const ZoomableContent: React.ForwardRefRenderFunction<
       dragRef.current = { x: e.clientX, y: e.clientY };
     }
   };
-
+  // Function to handle mouse up event
   const handleMouseUp = () => {
     setIsDragging(false);
     dragRef.current = null;
   };
-
+  // Function to handle wheel event
   const handleWheel = (e: WheelEvent) => {
     e.preventDefault();
     const newZoomLevel = zoomLevel + e.deltaY * -0.01;
@@ -69,7 +68,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
       y: prev.y - e.clientY * 0.01 * (newZoomLevel - zoomLevel),
     }));
   };
-
+  // Function to recenter the content
   const recenter = () => {
     if (contentRef.current) {
       const parent = contentRef.current.parentElement;
@@ -84,14 +83,8 @@ const ZoomableContent: React.ForwardRefRenderFunction<
         contentRef.current.style.transform = `translate(${childRect.width}px, ${childRect.height}px)`;
       }
     }
-    // const contentWidth = zoomLevel;
-    // const contentHeight = zoomLevel;
-    // const areaWidth = window.innerWidth;
-    // const areaHeight = window.innerHeight * 0.8;
-    // const newX = (areaWidth - contentWidth) / 2 - contentWidth / 2;
-    // const newY = (areaHeight - contentHeight) / 2 - contentHeight / 2;
-    // setPosition({ x: newX, y: newY });
   };
+  // Function to handle card submission
   const handleAddCardSubmit = (text: string, parentIdentifier?: string) => {
     const newCard: CardData = {
       text,
@@ -125,7 +118,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
         : prev
     );
   };
-
+  // Function to handle card deletion
   const handleDeleteCard = (identifier: string) => {
     setCards((prevCards) => {
       const updatedCards = prevCards.filter((card) => {
@@ -141,7 +134,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
       return updatedCards;
     });
   };
-
+  // Function to add child card
   const handleAddChild = (
     parentIdentifier: string,
     childText: string,
@@ -192,7 +185,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
       return updatedCards;
     });
   };
-
+  // Function to handle child deletion
   const handleDeleteChild = (
     parentIdentifier: string,
     childIdentifier: string
@@ -215,6 +208,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
       return updatedCards;
     });
   };
+  // Function to handle canceling card addition
   const handleCancelCard = () => {
     setIsAddingCard(false);
   };
@@ -226,6 +220,7 @@ const ZoomableContent: React.ForwardRefRenderFunction<
     }),
     [recenter]
   );
+  // useEffect for updating content line width
   useEffect(() => {
     const width =
       contentLineRefLength * (cards.length - 1) + 30 * (cards.length - 1);

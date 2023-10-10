@@ -16,13 +16,14 @@ const ContentArea: React.ForwardRefRenderFunction<
 > = ({ zoomLevel }, ref) => {
   const zoomableContentRef = useRef<ZoomableContentRef>(null);
 
+  // Function to recenter the content within ContentArea
   const recenter = () => {
     if (zoomableContentRef.current) {
       zoomableContentRef.current.recenter();
     }
   };
-  
 
+  // Attach the 'recenter' function to the ref
   useImperativeHandle(
     ref,
     () => ({

@@ -17,14 +17,17 @@ const Header: React.FC<HeaderProps> = ({
   onZoomChange,
 }) => {
   const [clicked, setClicked] = useState(false);
+
+  // Toggle the dropdown when zoom level is clicked
   const handleZoomChoice = () => {
     setClicked((prev) => !prev);
   };
+
+  // Handle selecting a new zoom level from the dropdown
   const handleOption = (newZoomLevel: number) => {
     onZoomChange(newZoomLevel);
     setClicked((prev) => !prev);
   };
-
   return (
     <div className="header">
       <div className="left-items">

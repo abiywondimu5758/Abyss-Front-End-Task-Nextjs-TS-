@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import "./InputForm.css";
 
 interface InputFormProps {
-  Value?: string;
-  onSubmit: (text: string) => void;
-  onClose?: () => void;
+  Value?: string; // Initial value for the input (if any)
+  onSubmit: (text: string) => void; // Function to handle form submission
+  onClose?: () => void; // Optional function to handle form closing
 }
 
 const InputForm: React.FC<InputFormProps> = ({ onSubmit, Value, onClose }) => {
   const [inputValue, setInputValue] = useState(Value || "");
 
+  // Function to handle input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
+  // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim() !== "") {
@@ -21,7 +23,6 @@ const InputForm: React.FC<InputFormProps> = ({ onSubmit, Value, onClose }) => {
       setInputValue("");
     }
   };
-
   return (
     <form className="input-form" onSubmit={handleSubmit}>
       <input
