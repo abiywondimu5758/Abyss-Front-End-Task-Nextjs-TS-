@@ -1,0 +1,44 @@
+/* InputForm.css */
+
+.input-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 210px; /* Set the width of the form */
+}
+
+.input-form input {
+  flex: 1;
+  /* padding: 5px; */
+  width: 140px; /* Set the width of the input */
+  height: 30px;
+  outline: none;
+  border: 0px;
+  text-align: center;
+}
+.input-form input::placeholder {
+  color: #999; /* Set the placeholder text color */
+  font-size: 18px; /* Set the font size of the placeholder */
+  font-weight: semi-bold;
+}
+
+.input-form button {
+  background-color: #f3d240; /* Yellow background */
+  border: none;
+  border-radius: 50%; /* Make the button circular */
+  width: 20px; /* Set the width of the button */
+  height: 20px; /* Set the height of the button */
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.input-form button svg {
+  color: #ffffff;
+  width: 10px;
+  height: 10px;
+}
+
+.input-form button.add-button {
+  background-color: #008000; /* Green background for the add button */
+}

@@ -1,0 +1,72 @@
+.content-area {
+  flex-grow: 1;
+  background-color: #f5f7f9;
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0px;
+}
+
+.button-top,
+.button-bottom {
+  width: 100px;
+  height: 40px;
+  background-color: #c5d0d9;
+  opactiy: 0.8;
+  position: absolute;
+  border-radius: 3px;
+}
+.button-left,
+.button-right {
+  width: 40px;
+  height: 100px;
+  background-color: #c5d0d9;
+  opactiy: 0.6;
+  position: absolute;
+  border-radius: 3px;
+}
+
+.button-top {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-bottom {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-left {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.button-right {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.button-top svg,
+.button-bottom svg,
+.button-left svg,
+.button-right svg {
+  width: 60%;
+  height: 60%;
+  fill: #ffffff
+}
+
+.button-top,
+.button-bottom,
+.button-left,
+.button-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

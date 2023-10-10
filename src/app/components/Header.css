@@ -1,0 +1,143 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7f9;
+  height: 14vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 1px solid #dddddd;
+  justify-content: space-between;
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+}
+
+.right-items {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-right: 10px;
+}
+
+.circle {
+  margin-top: 5px;
+  width: 24px;
+  height: 24px;
+  background-color: #fcba49;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-text {
+  color: #ffffff;
+}
+
+.rectangle-button {
+  background-color: #6b78e1;
+  color: #ffffff;
+  border: none;
+  height: 40px;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.square-button {
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.square-button:hover {
+  background-color: #C5D0D9; 
+}
+.square-button svg{
+  width: 40%;
+  height: 40%;
+  fill: #808080;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+
+.zoom-button {
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 16px;
+  margin-right: 3px;
+  color: #808080;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.zoom-button:hover {
+  background-color: #C5D0D9; 
+}
+
+
+.text-view {
+  display: flex;
+  background-color: #ffffff;
+  color: #808080;
+  border: none;
+  width: 60px;
+  height: 40px;
+  /* padding: 10px 15px 10px 15px; */
+  cursor: pointer;
+  margin-right: 3px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.text-view:hover {
+  background-color: #C5D0D9; 
+}
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 60px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+
+
+.dropdown div {
+  color: #808080;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown div:hover {
+  background-color: #C5D0D9; 
+}

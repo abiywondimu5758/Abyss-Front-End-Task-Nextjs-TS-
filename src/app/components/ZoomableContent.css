@@ -1,0 +1,153 @@
+/* ZoomableContent.css */
+
+.zoomable-content {
+  position: relative;
+  /* border: 2px solid #ccc; */
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.zoomable-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100px; */
+}
+.Zoomable-text-line-container {
+  margin-bottom: -9px;
+}
+.Zoomable-text-line-container hr {
+  border-left: 0.5px solid #000; /* Adjust color and thickness as needed */
+  width: 0px;
+  height: 20px; /* Adjust height as needed */
+  margin: 0 auto;
+}
+.zoomable-text-container {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px dashed;
+  padding: 3px 20px 3px 20px;
+  width: 130px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+  margin-right: 10px;
+}
+
+.zoomable-text-container p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.zoomable-input-container {
+  margin-top: 10px;
+}
+
+.plus-button {
+  background-color: #ff9900; /* Orange background */
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plus-button svg {
+  fill: white;
+  width: 10px;
+  height: 10px;
+}
+
+.plus-button-b {
+  background-color: Grey; /* Orange background */
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plus-button-b svg {
+  fill: white;
+  width: 10px;
+  height: 10px;
+}
+
+/* ZoomableContent.css */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards-container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 9px;
+}
+.cards-container-3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 9px;
+}
+
+.card-container {
+  margin-left: 30px;
+}
+
+.card {
+  /* border: 0; */
+  /* background-color: #f9f9f9; */
+  /* border-radius: 5px; */
+  /* padding: 10px; */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+.child {
+  display: flex;
+}
+.add-card-1 {
+  /* padding-top: 10px; */
+}
+
+.entity {
+  margin-bottom: 16px;
+  height: 100%;
+}
+.entity > hr {
+  height: 0px;
+}
+
+/* .edit-button,
+.add-button,
+.delete-button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.edit-button svg,
+.add-button svg,
+.delete-button svg {
+  fill: white;
+  width: 10px;
+  height: 10px;
+} */
